@@ -1,4 +1,4 @@
-# Covid-19-Tracker-Website-HTML-CSS-JavaScript
+# Covid 19 Tracker Website using HTML-CSS-JavaScript
 
 This project was a huge learning curve for me as this was the first time I used HTML, CSS or JavaScript in a project. 
 
