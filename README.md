@@ -8,3 +8,5 @@ The simple web-app tracks covid cases in India. You can see each states details 
 The api used for the data: <https://api.covid19india.org/>
 
 I also used Mapbox to integrate the map.
+
+Link to the website: <https://sayakdas10-covidtrackerindia.netlify.app/>
