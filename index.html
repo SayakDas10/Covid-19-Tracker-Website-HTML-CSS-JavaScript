@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale = 1.0" />
+        <title>Covid19TrackerV2</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="#" />
+        <link 
+		rel="stylesheet" 
+		href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin=""
+		/>
+		
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin="">
+		</script>
+    </head>
+    <body>
+        <!-- Navigation Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="#bullets" id="navbar__logo">Covid19</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="#bullets" class="navbar__links" id="home-page">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#maps" class="navbar__links" id="maps-page">Maps</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#table" class="navbar__links" id="table-page">Tables</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="#autocomplete" onclick="topFunction()" class="button" id="search-icon">Search</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <form autocomplete="off" action="#home">
+            <div class="autocomplete" style="width: 70%; padding-top:2%; padding-left: 35%; padding-right: 5%;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Search a state...">
+            </div>
+        </form>
+        
+        <!-- Bullets Section -->
+        <div class="bullets" id="bullets">
+            <h1 id="time"></h1>
+            <div class="bullets__wrapper">
+                <div class="bullets__card">
+                    <h2>Confirmed</h2>
+                    <p id="confirmed"></p>
+                </div>
+                <div class="bullets__card">
+                    <h2>Active</h2>
+                    <p id="active"></p>
+                </div>
+                <div class="bullets__card">
+                    <h2>Recovered</h2>
+                    <p id="recovered"></p>
+                </div>
+                <div class="bullets__card">
+                    <h2>Deceased</h2>
+                    <p id="deceased"></p>
+                </div>
+            </div>
+        </div>
+        <style>
+			body{
+				margin: 0;
+			}
+		</style>
+        <div class="map" id="maps">
+            <h1>Highlights Through Map</h1>
+            <div id='CovidMap'></div>
+        </div>
+
+        <!--table section-->
+        <div class="table" id="table" style="overflow-x: auto;">
+            <table class="styled__table">
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>Confirmed</th>
+                        <th>Active</th>
+                        <th>Recovered</th>
+                        <th>Deceased</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <tbody id="table--data"></tbody>
+            </table>
+        </div>
+       
+        <script src="scripts/api.js"></script>
+        <script src="scripts/script.js"></script>
+        
+    </body>
+</html>
