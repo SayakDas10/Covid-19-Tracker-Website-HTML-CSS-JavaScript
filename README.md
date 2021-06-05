@@ -1,6 +1,6 @@
 # Covid 19 Tracker Website using HTML-CSS-JavaScript
 
-This project was a huge learning curve for me as this was the first time I used HTML, CSS or JavaScript in a project. 
+This project was a huge learning curve for me as this was my first time using HTML, CSS or JavaScript.
 
 
 The simple web-app tracks covid cases in India. You can see each states details by searching a state name or by tapping your state in the map or by looking at the table.
